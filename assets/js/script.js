@@ -27,25 +27,27 @@ function asignarEventos () {
 }
 
 function agregar() {
-	var id = document.getElementById('id').value;
-	var titulo = document.getElementById('txtTitulo').value;
-	var descripcion = document.getElementById('txtDescripcion').value;
-	var peticion = new XMLHttpRequest();
+	let id = document.getElementById('id').value;
+	let titulo = document.getElementById('txtTitulo').value;
+	let descripcion = document.getElementById('txtDescripcion').value;
+	let peticion = new XMLHttpRequest();
 
 	peticion.onreadystatechange = function () {
 		if (this.readyState == 4) {
 			recargar();
 			limpiarCampos();
-			document.getElementById('btn').value = "agregar";
-			document.getElementById('btn').innerHTML = "Agregar";
+			document.getElementById('btn').value = "ingresar";
+			document.getElementById('btn').innerHTML = "Ingresar";
 		}
 	};
 
-	var datos = 'titulo=' + titulo + "&descripcion=" + descripcion;
+	let datos = 'titulo=' + titulo + "&descripcion=" + descripcion;
 
 	if (this.value == "editar") {
 		datos += '&id=' + id;
 	}
+
+	// console.log(this.value);
 
 	peticion.open('POST', 'demografias/' + this.value);
 	peticion.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -53,7 +55,7 @@ function agregar() {
 }
 
 function eliminar () {
-	var peticion = new XMLHttpRequest();
+	let peticion = new XMLHttpRequest();
 
 	peticion.onreadystatechange = function () {
 		if (this.readyState == 4) {

@@ -15,11 +15,11 @@
 	<link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
 </head>
 <body>
-	<h1 class="text-center mb-5">Demografias</h1>
+	<h1 class="text-center mt-3 mb-5">Demografias</h1>
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 col-lg-5 mb-3">
+			<div class="col-lg-5 mb-3">
 				<div class="title-medium mb-3">
 					<i class="fas fa-chart-bar me-3"></i>
 					NUEVA DEMOGRAFÍA
@@ -34,13 +34,11 @@
 					<div class="row">
 						<textarea id="txtDescripcion" class="form__textarea mb-4" placeholder="Descripción de demografía"></textarea>
 					</div>
-					<div class="row">
-						<button id="btn" class="btn-success rounded-pill" value="agregar">Agregar</button>
-					</div>
+					<button id="btn" class="btn-success rounded-pill w-100" value="ingresar">Ingresar</button>
 				</div>
 			</div>
 
-			<div class="col-md-6 col-lg-7">
+			<div class="col-lg-7">
 			
 				<div class="title-medium mb-3">
 					<i class="fas fa-th-large me-3"></i>
